@@ -1,0 +1,57 @@
+.callback {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 50px 80px;
+  @include breakpoint(lg) {
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include breakpoint(md) {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 47%;
+    justify-content: flex-end;
+    @include breakpoint(lg) {
+      flex: 1 1 100%;
+      justify-content: center;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+    flex: 1 1 100%;
+  }
+  &__desc {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    flex: 1 1 100%;
+  }
+  &__btn {
+    &:not(:last-child) {
+      margin-right: 30px;
+      @include breakpoint(lg) {
+        // margin-right: 0;
+      }
+    }
+    @include breakpoint(lg) {
+      margin: 0 30px 20px;
+    }
+  }
+}

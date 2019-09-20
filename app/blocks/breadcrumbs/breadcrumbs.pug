@@ -1,0 +1,5 @@
+mixin breadcrumbs(data)
+  ul.breadcrumbs
+    each item in data.items
+      li 
+        a(href="javascript:void(0)")= item

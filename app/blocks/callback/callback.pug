@@ -1,0 +1,8 @@
+mixin callback(data)
+  .row.row_border.callback
+    .callback__wrap
+      .callback__title!= data.title
+      .callback__desc!= data.desc
+    .callback__wrap
+      if block
+        block

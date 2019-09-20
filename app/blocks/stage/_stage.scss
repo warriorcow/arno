@@ -1,0 +1,35 @@
+.stage {
+  display: flex;
+  margin: 0 -35px 30px;
+  width: calc(100% + 70px);
+  @include breakpoint(lg) {
+    flex-wrap: wrap;
+  }
+  &__foto {
+    width: 100%;
+    max-width: calc(45% - 70px);
+    height: 230px;
+    margin: 0px 35px;
+    @include breakpoint(lg) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &__info {
+    width: 100%;
+    max-width: calc(55% - 70px);
+    margin: 0px 35px;
+    @include breakpoint(lg) {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 15px;
+  }
+  &__desc {
+    color: $silver_chalice;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,277 @@
+html, body {
+  font-family: 'Roboto', serif;
+  margin: 0;
+  padding: 0;
+  background-color: $mercury;
+  line-height: 1.3;
+  font: 400 16px/1.3 'Roboto', serif;
+}
+
+body {
+  margin-bottom: 521px;
+  @include breakpoint(sm) {
+    margin-bottom: 0;
+  }
+}
+
+*::selection {
+  color: $white; /* Цвет текста */
+  background: #000; /* Цвет фона */
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  &_fluid {
+    max-width: 100%;
+  }
+  &_ebb {
+    background-color: $ebb;
+  }
+  &_pampas {
+    background-color: $pampas;
+  }
+  &_border {
+    border-top: 1px solid $silver_chalice;
+  }
+}
+
+.row {
+  width: 100%;
+  overflow: hidden;
+  max-width: 1100px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @include breakpoint(lg) {
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include breakpoint(md) {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &_outside {
+    margin-top: -110px;
+  }
+  &_compensate {
+    padding-bottom: 110px;
+    @include breakpoint(sm) {
+      padding-bottom: 0;
+    }
+  }
+  &__item {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    &_compensate {
+      padding-top: 110px;
+      @include breakpoint(sm) {
+        padding-bottom: 0;
+      }
+    }
+    @include breakpoint(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex: 1 1 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-right: -25px;
+    margin-left: -25px;
+    @include breakpoint(sm) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    &_about {
+      padding-top: 15px;
+      p {
+        margin-bottom: 15px;
+      }
+      .row__item {
+        &:first-child {
+          max-width: calc(40% - 50px);
+          @include breakpoint(sm) {
+            max-width: 100%;
+            margin-bottom: 30px;
+          }
+        }
+        &:last-child {
+          max-width: calc(60% - 50px);
+          @include breakpoint(sm) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    &_grid {
+      .row__item {
+        max-width: calc(50% - 50px);
+        @include breakpoint(sm) {
+          max-width: 100%;
+        }
+      }
+    }
+    &_third {
+      margin-right: -15px;
+      margin-left: -15px;
+      .row__item {
+        max-width: calc(33.33% - 30px);
+        padding-left: 15px;
+        padding-right: 15px;
+        @include breakpoint(sm) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &_border {
+    border-right: 1px solid $silver_chalice;
+    border-left: 1px solid $silver_chalice;
+  }
+  &_white {
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
+  }
+}
+
+p {
+  color: $gray;
+  font-size: 16px;
+  margin: 0 0 15px 0;
+  width: 100%;
+  // &:not(:last-child) {
+  //   margin: 0 0 20px 0;
+  // }
+}
+
+blockquote {
+  margin: 0;
+  padding: 0 25px 20px;
+  font-size: 18px;
+  color: $black;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  font-family: 'Roboto', serif;
+  background-color: transparent;
+  color: $black;
+  font-size: 14px;
+  border-bottom: 1px solid $black;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 0.2em;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  outline: 0;
+  padding-right: 20px;
+  box-sizing: border-box
+}
+
+.cart {
+  max-width: 400px;
+  display: block;
+  text-decoration: none;
+  color: $black;
+  margin-bottom: 40px;
+
+  @include breakpoint(sm) {
+    max-width: 100%;
+  }
+  &__title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  &__desc {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: $gray;
+    margin-top: 10px;
+  }
+}
+
+.article {
+  margin-bottom: 20px;
+  position: relative;
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+  &_black {
+    a {
+      color: $white;
+    }
+    .article__info {
+      padding: 30px 20px 40%;
+      background-color: $black;
+    }
+  }
+  &__img {
+    padding-top: 160%;
+    width: 100%;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__info {
+    padding: 20px 20px 30px;
+    text-align: center;
+    background-color: $white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__cat {
+    margin-bottom: 5px;
+    a {
+      display: inline-block;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      font-size: 11px;
+      &:not(:last-child):after {
+        content: ',';
+        margin-right: 5px;
+      }
+    }
+  }
+  &__title {
+    font-size: 20px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(transparent calc(100% - 1px),currentColor 1px);
+    transition: .6s cubic-bezier(.215,.61,.355,1);
+    background-size: 0 100%;
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.banner {
+  margin-bottom: 50px;
+  margin-top: 10px;
+}

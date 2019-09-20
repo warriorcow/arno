@@ -1,0 +1,12 @@
+mixin garant(data)
+  .garant.row.row_border
+    +title({
+      text: 'Гарантии',
+      tag: 'h2',
+      mods: ['h1']
+    })
+    .garant__wrap
+      each item in data.items
+        .garant__item
+          .garant__title!= item.title
+          .garant__desc!= item.desc

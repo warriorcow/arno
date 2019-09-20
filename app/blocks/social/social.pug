@@ -1,0 +1,7 @@
+mixin social(data)
+  .social(class=addClass('social', data.mods, data.addClass ))
+    each item in data.items
+      a(href=item.link, target="_blank").social__item
+        +icon({
+          icon: item.icon,
+        })

@@ -1,0 +1,6 @@
+mixin stage(data)
+  .stage
+    .stage__foto(style="background-image:url("+data.src_foto+")", alt="")
+    .stage__info
+      .stage__title!= data.title
+      .stage__desc!= data.desc

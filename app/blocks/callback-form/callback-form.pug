@@ -1,0 +1,16 @@
+mixin callback-form(data)
+  .callback-form
+    .callback-form__wrap
+      .callback-form__title!= data.title
+      .callback-form__desc!= data.desc
+    
+    form.callback-form__form
+      input(type="text" placeholder="Ваше имя")
+      input(type="tel" placeholder ="Телефон")
+      input(type="text" placeholder="Сообщение")
+
+      +btn({
+        text: 'Отправить',
+        mods: ['active'],
+        add_Class: 'callback-form__btn'
+      })

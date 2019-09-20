@@ -1,0 +1,28 @@
+.garant {
+  &__wrap {
+    display: flex;
+    margin: 0px -15px;
+    @include breakpoint(lg) {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    margin: 0 15px;
+    @include breakpoint(lg) {
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__title {
+    border-top: 1px solid $gray;
+    padding-top: 10px;
+    display: inline-block;
+    font-size: 20px;
+  }
+  &__desc {
+    margin-top: 20px;
+    color: $silver_chalice;
+  }
+}

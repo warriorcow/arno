@@ -1,0 +1,45 @@
+footer.footer.container
+  .row
+    .row__wrapper 
+      .row__item
+        p Оставьте ваши контакты
+        p Мы вам перезвоним
+
+        form.form.footer__form
+          input(type='text', placeholder='Имя')
+          input(type="tel", placeholder='Телефон')
+          button.btn.btn_form(type='submit', value='') Отправить
+          label 
+            input(type="checkbox")
+            | Подтверждаю 
+            a(href="#") согласие
+            |  на обработку персональных данных
+        
+        p Позвоните нам: 
+          a(href="tel:+7 (495) 661-85-13") +7 (495) 661-85-13     
+          a(href="tel:+7 (4932) 26-28-33") +7 (4932) 26-28-33
+
+        p Напишите нам: it@arnoarch.com
+
+        p 
+          | Наши данные: #[br]
+          | ООО "Арно Архитектура" #[br]
+          | ИНН 3702710141     КПП 370201001     ОГРН 1133702024532
+
+        p ARNO ARCHITETTURE 2011-2019 г.
+
+        +social({
+          mods: ['center'],
+          items: [{
+            icon: 'instagram',
+            link: "https://www.instagram.com/arnoarch/"
+          },{
+            icon: 'facebook',
+            link: "https://www.facebook.com/arnoarch/"
+          },{
+            icon: 'vk',
+            link: "https://vk.com/arnoarch"
+          }]
+        })
+
+  

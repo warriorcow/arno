@@ -1,0 +1,7 @@
+mixin faces(data)
+  .faces
+    each item in data.items
+      .faces__item
+        .faces__foto(style="background-image:url("+item.src_foto+")", alt="")
+        .faces__who!= item.who
+        .faces__name!= item.name

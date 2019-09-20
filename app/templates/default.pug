@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/libs.css")
+    link(rel="stylesheet", href="/css/style.css")
+    title NEW PROJECT
+  body
+
+    block vars
+      include /app/blocks/btn/btn
+      include /app/blocks/title/title
+      include /app/blocks/icon/icon
+      include /app/blocks/header/header
+      include /app/blocks/breadcrumbs/breadcrumbs
+      include /app/blocks/callback/callback
+      include /app/blocks/garant/garant
+      include /app/blocks/faces/faces
+      include /app/blocks/list/list
+      include /app/blocks/stage/stage
+      include /app/blocks/callback-form/callback-form
+      include /app/blocks/social/social
+
+    block header
+      +header({
+        logo: 'logo.png',
+        menu_items: [{
+          link: 'javascript:void(0);',
+          text: 'Главная',
+          status: "active"
+        },{
+          link: 'javascript:void(0);',
+          text: 'Портфолио'
+        },{
+          link: 'javascript:void(0);',
+          text: 'О нас'
+        },{
+          link: 'javascript:void(0);',
+          text: 'Услуги'
+        },{
+          link: 'javascript:void(0);',
+          text: 'Блог'
+        },{
+          link: 'javascript:void(0);',
+          text: 'Контакты'
+        },{
+          link: 'tel:+7(495) 661-85-13',
+          text: '+7(495) 661-85-13'
+        }]
+      })
+        //-   slider_items: [{
+        //-     src_image: '/img/banner.jpg'
+        //-   },{
+        //-     src_image: '/img/banner-2.jpg'
+        //-   },{
+        //-     src_image: '/img/banner-3.jpg'
+        //-   }]
+        //- })
+
+    block main
+
+    block footer 
+      include /app/blocks/footer/footer
+      div(style='display: none;')
+        include ../../dist/img/icons/icons.svg
+      script(src="/js/libs.js")
+      script(src="/js/scripts.js")

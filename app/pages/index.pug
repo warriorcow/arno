@@ -1,0 +1,150 @@
+extends /app/templates/default
+
+block header
+  +header({
+    logo: 'logo.png',
+    menu_items: [{
+      link: 'javascript:void(0);',
+      text: 'Главная',
+      status: "active"
+    },{
+      link: 'javascript:void(0);',
+      text: 'Портфолио'
+    },{
+      link: 'javascript:void(0);',
+      text: 'О нас'
+    },{
+      link: 'javascript:void(0);',
+      text: 'Услуги'
+    },{
+      link: 'javascript:void(0);',
+      text: 'Блог'
+    },{
+      link: 'javascript:void(0);',
+      text: 'Контакты'
+    },{
+      link: 'tel:+7(495) 661-85-13',
+      text: '+7(495) 661-85-13'
+    }],
+    slider_items: [{
+      src_image: '/img/banner.jpg'
+    },{
+      src_image: '/img/banner-2.jpg'
+    },{
+      src_image: '/img/banner-3.jpg'
+    }]
+  })
+
+
+
+block main
+  main
+    .container
+      .row.row_border
+        .row__wrapper.row__wrapper_about
+          .row__item
+            img(src="/img/arno.png", alt="", data='parallax')
+          .row__item
+            +title({
+              tag: 'div',
+              text: 'О нас',
+              mods: ['h3']
+            })
+            +title({
+              tag: 'div',
+              text: 'Добро пожаловать в ARNO ARCHITETTURE!',
+              mods: ['h2']
+            })
+            p 
+              | Приветствую Вас на сайте итальянской студии архитектуры и дизайна ARNO ARCHITETTURE. #[br]
+              | Моя миссия, как архитектора — создавать красоту и делиться ею с миром!  #[br] 
+              | Как итальянец, как архитектор-итальянец, я чувствую двойную ответственность за то, чтобы мои творения соответствовали духу необычного места, где мне повезло родиться и учиться. В моих работах вы всегда сможете найти образы Италии.  #[br]
+              | Древние витрувианские принципы utilitas, firmitas и venustas (основательность, функциональность и красота) являются краеугольным камнем в моих архитектурных исследованиях.  #[br]
+              | Я считаю, что архитектура должна удивлять, но не быть простой демонстрацией способностей архитектора реализовать все свои знания и умения. Для меня намного важнее, чтобы создаваемое пространство, превратилось в родной и любимый Дом, где вы почувствуете не только безопасность и покой, но и мощное восстановительное воздействие.  #[br]
+            p
+              | Джузеппе Арноне,#[br]
+              | архитектор, основатель студии,#[br]
+              | член союза архитекторов Италии
+
+    .container.container_border
+      .row.row_border.row_compensate
+        .row__wrapper.row__wrapper_grid
+          .row__item
+            +title({
+              tag: 'div',
+              text: 'Основные<br> направления работы',
+              mods: ['h1'],
+              addClass: "title__margin"
+            })
+            a.cart(href="#")
+              img(src="/img/cart.png", alt="")
+              .cart__title Дизайн проект жилого интерьера
+              .cart__desc Квартиры, апартаменты, пентхаусы, дома.
+            a.cart(href="#")
+              img(src="/img/cart.png", alt="")
+              .cart__title Дизайн проект жилого интерьера
+              .cart__desc Квартиры, апартаменты, пентхаусы, дома.
+          .row__item
+            a.cart(href="#")
+              img(src="/img/cart.png", alt="")
+              .cart__title Дизайн проект жилого интерьера
+              .cart__desc Квартиры, апартаменты, пентхаусы, дома.
+            a.cart(href="#")
+              img(src="/img/cart.png", alt="")
+              .cart__title Дизайн проект жилого интерьера
+              .cart__desc Квартиры, апартаменты, пентхаусы, дома.
+
+    .container.container_pampas
+      .row.row_outside
+        .row__wrapper.row__wrapper_about
+          .row__item.row__item_compensate
+            +title({
+              tag: 'div',
+              text: 'Портфолио',
+              mods: ['h3']
+            })
+            +title({
+              tag: 'div',
+              text: 'Реализованные проекты студии',
+              mods: ['h1']
+            })
+          .row__item
+            .slider.slider_services
+              .slider__item(style='background-image: url(/img/banner.jpg)')
+              .slider__item(style='background-image: url(/img/banner-2.jpg)')
+              .slider__item(style='background-image: url(/img/banner-3.jpg)')
+
+            .slider.slider_togo
+              a.slider__item(data-slide="1", href="javascript:void(0)") Дома
+              a.slider__item(data-slide="2", href="javascript:void(0)") Квартиры
+              a.slider__item(data-slide="3", href="javascript:void(0)") Коммерческие проекты
+
+    .container
+      .row.row_border
+        .row__wrapper.row__wrapper_third
+          .row__item 
+            .article(href="javascript:void(0);")
+              a.article__img(href="javascript:void(0);", style="background-image: url(/img/article.jpg)")
+              .article__info
+                .article__cat 
+                  a(href="javascript:void(0);") Decor
+                  a(href="javascript:void(0);") Style
+                a.article__title(href="javascript:void(0);") Квартира
+
+          .row__item 
+            .article.article_black(href="javascript:void(0);")
+              a.article__img(href="javascript:void(0);", style="background-image: url(/img/article.jpg)")
+              .article__info
+                .article__cat 
+                  a(href="javascript:void(0);") Decor
+                  a(href="javascript:void(0);") Style
+                a.article__title(href="javascript:void(0);") Квартира
+
+          .row__item 
+            .article(href="javascript:void(0);")
+              a.article__img(href="javascript:void(0);", style="background-image: url(/img/article.jpg)")
+              .article__info
+                .article__cat 
+                  a(href="javascript:void(0);") Decor
+                  a(href="javascript:void(0);") Style
+                a.article__title(href="javascript:void(0);") Квартира
