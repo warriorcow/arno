@@ -29,11 +29,19 @@
       border-color: $gray;
     }
     label {
-      padding-top: 20px;
       color: $gray;
+      margin-top: 20px;
+      position: relative;
+      padding-left: 30px;
+      text-align: left;
     }
     [type=checkbox] {
-      margin: 5px 10px;
+      margin: 0;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
     }
   }
 }

@@ -248,3 +248,9 @@
     background-size: cover;
   }
 }
+
+input {
+  &:not([type=checkbox]) {
+    -webkit-appearance: none
+  }
+}
