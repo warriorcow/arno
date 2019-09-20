@@ -6,10 +6,13 @@ var lastScrollTop = 0;
 $('body').css('padding-top', heightHeader);
 $('.slider_header').css('margin-top', -heightHeader);
 
+header.addClass('transparent');
+
+
 $(window).scroll(function(event){
   var top = $(this).scrollTop();
   var st = $(this).scrollTop();
-  if (st > lastScrollTop && (top > 100)){
+  if (st > lastScrollTop && (top > 50)){
     header.addClass('hidden');
     header.removeClass('transparent');
     if($('.header__burger').hasClass('active')) {

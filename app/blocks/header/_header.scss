@@ -3,18 +3,20 @@
   left: 0;
   top: 0;
   z-index: 1;
-  border-bottom: 1px solid $white;
+  border-bottom: 1px solid $silver_chalice;
   transition: .4s;
-  background-color: $mercury;
-  // &.fixed {
-  //   position: fixed;
-  //   transform: translateY(0%);
-  //   background-color: $mercury;
-  // }
+  background-color: $white;
   &.transparent {
     background-color: transparent;
+    border-bottom: 1px solid $silver_chalice;
     @include breakpoint(lg) { 
       background-color: $mercury;
+    }
+    .header__wrap {
+      &:before,
+      &:after {
+        background-color: $silver_chalice;
+      }
     }
   }
   &.hidden {
@@ -36,18 +38,15 @@
     padding-top: 27px;
     padding-bottom: 27px;
     position: relative;
-    // flex-wrap: wrap;
     align-items: center;
     overflow: visible;
-    
-
     &:before,
     &:after {
       position: absolute;
       content: '';
       height: 100%;
       width: 1px;
-      background-color: #fff;
+      background-color: $silver_chalice;
       transition: .4s;
       top: 0px;
       z-index: 10;
@@ -60,6 +59,17 @@
     }
     &:after {
       right: 0;
+    }
+  }
+  &_main {
+    &.transparent {
+      border-bottom: 1px solid $white;
+      .header__wrap {
+        &:before,
+        &:after {
+          background-color: $white;
+        }
+      }
     }
   }
   &__burger {
