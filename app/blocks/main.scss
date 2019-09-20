@@ -275,3 +275,7 @@ input {
   margin-bottom: 50px;
   margin-top: 10px;
 }
+
+input:not([type=checkbox]) {
+  -webkit-appearance: none
+}
